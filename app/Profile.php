@@ -6,11 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-     protected $guarded = array('id');
-        public static $rules = array(
-        '氏名(name)' => 'required',
-        '性別(gender)' => 'required',
-        '趣味(hobby)' => 'required',
-        '自己紹介欄(introduction)' => 'required',
+    protected $guarded = array('id');
+
+    // 以下を追記
+    public static $rules = array(
+        'name' => 'required',
+        'gender' => 'required',
+        'hobby' => 'required',
+        'introduction' => 'required'
     );
-}
+}    //
+
