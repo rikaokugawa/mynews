@@ -41,8 +41,10 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('profile','Admin\ProfileController@index')->middleware('auth');
     Route::get('profile/delete','Admin\ProfileController@delete')->middleware('auth');
     Route::get('profile', 'Admin\ProfileController@index')->middleware('auth'); // 追記
-;
-        
 });
+
+Route::get('/', 'NewsController@index');
+
+Route::get('/profile', 'ProfileController@index');
 
 
